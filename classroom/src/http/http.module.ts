@@ -12,7 +12,7 @@ import { TestResolver } from './test.resolver';
     DatabaseModule,
     GraphQLModule.forRoot({
       driver: ApolloDriver,
-      autoSchemaFile: path.resolve(process.cwd(), 'src/schem.gql'),
+      autoSchemaFile: path.resolve(process.cwd(), 'src/schema.gql'),
     }),
   ],
   providers: [TestResolver],
