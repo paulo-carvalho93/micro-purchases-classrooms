@@ -6,7 +6,6 @@ import { Footer } from "../../components/Footer";
 import { withApollo } from "../../lib/withApollo";
 import { useMe } from "../../graphql/generated/page";
 import Link from "next/link";
-import Image from "next/image";
 
 const applicants = [
   {
@@ -81,7 +80,7 @@ function Courses() {
                         <div className="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5">
                           <div className="flex overflow-hidden -space-x-1">
                             {applicants.map((applicant) => (
-                              <Image
+                              <img
                                 key={applicant.email}
                                 className="inline-block h-6 w-6 rounded-full ring-2 ring-white"
                                 src={applicant.imageUrl}
