@@ -3,15 +3,6 @@ import { getAccessToken, getSession, useUser, withPageAuthRequired } from "@auth
 import { GetServerSideProps } from "next";
 import { withApollo } from './../../lib/withApollo';
 
-const PRODUCTS_QUERY = gql`
-  query GetProducts {
-    products {
-      id
-      title
-    }
-  }
-`
-
 function Home() {
   const { user } = useUser();
   const { data } = useQuery(PRODUCTS_QUERY);
